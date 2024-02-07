@@ -1,2 +1,24 @@
 #!/bin/bash
-python3 -m py_compile $PYFILE
+#check if the PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Check if the Python script file exists
+if [ ! -f "$PYFILE" ]; then
+    echo "Error: Python script file '$PYFILE' does not exist."
+    exit 1
+fi
+
+# Compile the Python script file
+python3 -m py_compile "$PYFILE"
+
+# Check if the compilation was successful
+if [ $? -eq 0 ]; then
+    echo "Compilation successful: $PYFILE"
+    exit 0
+else
+    echo "Error: Compilation failed for $PYFILE."
+    exit 1
+fi
