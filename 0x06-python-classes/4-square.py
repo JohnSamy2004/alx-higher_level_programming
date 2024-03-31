@@ -27,12 +27,21 @@ class Square:
             Area of the square(int)
         """
         return (self.__size * self.__size)
-    
-    '''getter'''
 
+    @property
     def size(self):
+        """getter that get size variable"""
         return (self.__size)
-    
-    '''setter'''
+
+    @size.setter
     def size(self, value):
-        self.size = value
+        """Set thesize to the value
+
+        Args:
+            value: the value to reset
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
