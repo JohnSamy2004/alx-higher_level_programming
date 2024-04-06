@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    '''initialize the constructor'''    
+    '''initialize the constructor'''
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -11,23 +11,25 @@ class Rectangle:
     @property
     def width(self):
         return (self.__width)
+    
     @width.setter
     def width(self, value):
-        if isinstance(value, int):
-            self.__width = value
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
-            raise TypeError("width must be an integer")
+            self.__width = value
 
     @property
     def height(self):
         return (self.__height)
+    
     @height.setter
     def height(self, value):
-        if isinstance(value, int):
-            self.__height = value
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            raise TypeError("height must be an integer")
+            self.__height = value
