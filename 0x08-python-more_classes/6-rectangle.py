@@ -3,8 +3,9 @@
 
 
 class Rectangle:
+    '''Class :)'''
     number_of_instances = 0
-    '''initialize the constructor'''
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
