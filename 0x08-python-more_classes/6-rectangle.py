@@ -1,4 +1,5 @@
-s defines a rectangle by: (based on 0-rectangle.py)'''
+#!/usr/bin/python3
+''' This defines a rectangle by: (based on 0-rectangle.py)'''
 
 
 class Rectangle:
