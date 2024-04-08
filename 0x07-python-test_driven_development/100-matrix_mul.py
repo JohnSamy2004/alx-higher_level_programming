@@ -13,7 +13,8 @@ def matrix_mul(m_a, m_b):
         TypeError: If m_a or m_b is not a list
         TypeError: If m_a or m_b is not a list of lists
         TypeError: If one element of list of lists is not int/float
-        TypeError: If row of m_a or m_b are not the same size
+        TypeError: If each row of m_a is not the same size
+        TypeError: If each row of m_b is not the same size
         ValueError: If m_a or m_b is empty
         ValueError: If m_a and m_b cannot be multiplied
     Returns:
@@ -43,9 +44,9 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_b should contain only integers or floats")
 
     if not all(len(row) == len(m_a[0]) for row in m_a):
-        raise TypeError("each row of m_a must should be of the same size")
+        raise TypeError("each row of m_a must be of the same size")
     if not all(len(row) == len(m_b[0]) for row in m_b):
-        raise TypeError("each row of m_b must should be of the same size")
+        raise TypeError("each row of m_b must be of the same size")
 
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
