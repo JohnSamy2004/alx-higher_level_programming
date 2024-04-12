@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    10-square: class Square from Rectangle
+    11-square: class Square from Rectangle
 """
 
 
@@ -29,3 +29,7 @@ class Square(Rectangle):
         """
         area = self.__size * self.__size
         return area
+
+    def __str__(self):
+        return ("[{}] {}/{}".format(type(self).__name__,
+                                    self.__size, self.__size))
