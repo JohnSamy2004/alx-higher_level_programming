@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-"""
-    class square from rectangle
+ass square from rectangle
 """
 
 
@@ -18,6 +16,7 @@ class Square(Rectangle):
             __init__ - initialises the square.
     """
     def __init__(self, size):
+        '''initialises Square'''
         self.integer_validator("size", size)
 
         self.__size = size
