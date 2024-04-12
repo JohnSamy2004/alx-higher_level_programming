@@ -1,4 +1,6 @@
-ass square from rectangle
+#!/usr/bin/python3
+"""
+    class square from rectangle
 """
 
 
