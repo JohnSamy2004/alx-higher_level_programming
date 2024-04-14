@@ -5,9 +5,6 @@ Returns the dictionary description
 """
 
 
-import json
-
-
 def class_to_json(obj):
     """
     Returns the dictionary description with simple data structure
@@ -17,4 +14,4 @@ def class_to_json(obj):
     Args:
         obj: instance of a Class
     """
-    return json.dump(obj)
+    return obj.__dict__
