@@ -13,10 +13,7 @@ if __name__ == "__main__":
 
     filename = "add_item.json"
 
-    try:
-        arg_list = load_from_json_file(filename)
-    except:
-        arg_list = []
+    arg_list = load_from_json_file(filename)
 
     for arg in sys.argv[1:]:
         arg_list.append(arg)
