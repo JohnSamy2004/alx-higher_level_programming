@@ -3,13 +3,13 @@
 const square = require('./5-square.js');
 
 class Square extends square {
-  charPrint(c) {
+  charPrint (c) {
     if (c === undefined) {
-      c = 'X';
-    }
-
-    for (let i = 0; i < this.size; i++) {
-      console.log(c.repeat(this.size));
+      this.print();
+    } else {
+      for (let i = 0; i < this.width; i++) {
+        console.log(c.repeat(this.height)); // or the opposite because in square width value is euals to height value
+      }
     }
   }
 }
